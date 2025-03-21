@@ -1,0 +1,71 @@
+name: "USB Scanner Development"
+
+views:
+  - name: "Kanban Board"
+    type: board
+    fields:
+
+  - name: "Timeline"
+    type: timeline
+    fields:
+      - milestone
+      - assignees
+      - labels
+
+fields:
+  - id: status
+    name: Status
+    type: single_select
+    options:
+      - name: "🆕 New"
+        color: "0366d6"
+      - name: "📋 Backlog"
+        color: "bfdadc"
+      - name: "💻 In Progress"
+        color: "1a7f37"
+      - name: "👀 In Review"
+        color: "bf8700"
+      - name: "✅ Done"
+        color: "8250df"
+
+  - id: priority
+    name: Priority
+    type: single_select
+    options:
+      - name: "🔥 High"
+        color: "b60205"
+      - name: "🟡 Medium"
+        color: "fbca04"
+      - name: "🟢 Low"
+        color: "0e8a16"
+
+  - id: size
+    name: Size
+    type: single_select
+    options:
+      - name: "Small"
+        color: "bfdadc"
+      - name: "Medium"
+        color: "6e7781"
+      - name: "Large"
+        color: "2da44e"
+
+workflows:
+  - name: "Auto-add to project"
+    on:
+      issues:
+        types: [opened]
+    steps:
+      - type: add_to_project
+        status: "🆕 New"
+
+  - name: "Auto-close stale issues"
+    on:
+      schedule:
+        - cron: "0 0 * * *"
+    steps:
+      - type: close_stale
+        days: 60
+        labels:
+          - stale
+
