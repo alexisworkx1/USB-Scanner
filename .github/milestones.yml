@@ -1,0 +1,56 @@
+milestones:
+  - title: "v1.0.0 - Initial Release"
+    description: |
+      First stable release with core scanning functionality
+      
+      Key Features:
+      - Basic document scanning
+      - PDF export
+      - Image adjustment tools
+      - Basic file management
+    due_date: "2025-06-01"
+    
+  - title: "v1.1.0 - Batch Processing"
+    description: |
+      Batch scanning and processing capabilities
+      
+      Key Features:
+      - Batch scanning mode
+      - Multi-page PDF creation
+      - Preview and edit batch results
+      - Bulk file operations
+    due_date: "2025-08-01"
+    
+  - title: "v1.2.0 - OCR Integration"
+    description: |
+      OCR and text recognition features
+      
+      Key Features:
+      - Text recognition
+      - Searchable PDFs
+      - Multi-language support
+      - Text export options
+    due_date: "2025-10-01"
+    
+  - title: "v1.3.0 - Cloud Integration"
+    description: |
+      Cloud storage and sharing features
+      
+      Key Features:
+      - Cloud storage integration
+      - Auto-upload functionality
+      - Share capabilities
+      - Cross-device sync
+    due_date: "2025-12-01"
+    
+  - title: "v2.0.0 - Enterprise Features"
+    description: |
+      Enterprise-grade features and improvements
+      
+      Key Features:
+      - User management
+      - Advanced security options
+      - Audit logging
+      - Enterprise storage integration
+    due_date: "2026-03-01"
+
